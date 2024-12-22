@@ -1,5 +1,5 @@
 ---
-title: c.md
+title: c
 date: 2024-12-22 23:08:36
 tags:
 ---
