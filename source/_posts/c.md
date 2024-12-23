@@ -196,7 +196,7 @@ printf(...);
 
 > In C, semicolon is a statement terminator, rather than ...
 
-&emsp;&emsp;Braces `{` and `}` are used to group declarations and statements together into a compound statement, or block, so that *they are syntactically equivalent to a single statement*.
+&emsp;&emsp;Curly braces `{` and `}` are used to group declarations and statements together into a compound statement, or block, so that *they are syntactically equivalent to a single statement*.
 
 ## 3.2 Branches
 
@@ -228,6 +228,24 @@ if(expression != 0)
 ```
 
 > &emsp;&emsp;Sometimes this is natural and clear; at other times it can be cryptic.
+
+---
+
+&emsp;&emsp;Because the else part of an if-else is optional, there is an ambiguit when an else is omitted from a nested if sequence.
+
+This is resolved by associating the else with closest previous else-if. For example, in
+
+```c
+if (n > 0)
+    if (a > b)
+        z = a;
+    else
+        z = b;
+```
+
+the else goes with the inner if.
+
+---
 
 ### 3.2.2 else-if
 
